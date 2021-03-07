@@ -154,7 +154,7 @@ header ul {
 	font-size: 30px;
 }
 
-/*------ INFORMACIÓN -----*/
+/*------						INFORMACIÓN								-----*/
 .information {
 	margin: 0 7%;
 	padding: 0 7%;
@@ -180,6 +180,7 @@ header ul {
 }
 
 .about-me h2 {
+	color: #a3eef5;
 	padding: 10px;
 	padding-left: 25px;
 	margin-bottom: 15px;
@@ -187,14 +188,14 @@ header ul {
 
 .about-me p {
 	padding: 10px;
-	color: #14aab8;
+	color: #19d4e6;
 }
 
 .me {
 	width: 40%;
 	margin: 5px 20px;
 	padding: 20px;
-	background: url(./../Images/logo/newlogo-basedarkblue-brilliant_2.jpg);
+	background: url(./../Images/logo/logo_size.jpg);
 	background-size: cover;
 	border-radius: 20px;
 	transition: background 0.7s;
@@ -206,11 +207,7 @@ header ul {
 }
 
 .me-picture {
-	width: 100%
-}
-
-.me-picture:hover {
-
+	width: 100% /*DESACTIVADA*/
 }
 
 .experience {
@@ -227,11 +224,20 @@ header ul {
 
 }
 
-.experience h3 {
+.xp-bussiness {    /*h3*/
 	padding: 5px;
 }
 
-.experience h4 {
+.business {
+	cursor: pointer;
+	color: #a3eef5;
+}
+
+.business:hover {
+	text-shadow: 0 0 2px #19d4e6;
+}
+
+.dates {             /*h4*/
 	padding: 10px 20px;
 	color: #14aab8;
 }
@@ -259,6 +265,11 @@ header ul {
 	border-right: 2px solid #19d4e6;
 }
 
+.xp-first div h3 {
+	float: left;
+}
+
+
 .xp-last {
 	background: linear-gradient(to left, rgba(5, 5, 18, 0.5), transparent);
 	border-right: 4px solid #19d4e6;
@@ -267,6 +278,7 @@ header ul {
 	transition: background;
 	transition: border-left 1s;
 	margin-bottom: 0;
+	float: right;
 }
 
 .xp-last:hover {
@@ -274,13 +286,16 @@ header ul {
 	border-left: 2px solid #19d4e6;
 }
 
-
+.xp-last div h3 {
+	float: right;
+}
 
 /*WORK IN PROGRESS*/
 .work-in-p {
-	padding: 0 36%;
+	margin: auto;
 	flex-direction: column;
 	align-items: center;
+	width: 300px;
 }
 
 .work-in-p h2 {
@@ -292,29 +307,48 @@ header ul {
 	border-radius: 25px;
 	border: 2px solid #19d4e6;
 	width: 100%;
+	margin: 10px 0;
+}
+
+.enlaces {
+	width: 100%;
+	padding: 20px 20px;
+	padding-bottom: 0;
+	justify-content: space-between;
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+
+}
+
+.enlaces div {
+	margin: auto;
+	width: 285px;
+}
+
+.enlaces div a {
+	font-size: 25px;
 	margin: 10px;
 }
 
-/*FOOTER*/
+/* 						FOOTER  					*/
 footer {
 	margin: auto;
 	width: 100%;
-	font-size: 20px;
+	font-size: 75%;
 	border-radius: 5px;
-	background: linear-gradient(transparent, #000);
+	background: rgba(0, 0, 0, 0.8);
 	color:#19d4e6; 
 	clear:both;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	text-align:center;
-	font-family: 'Oswald', sans-serif;
-}
+	font-family: 'Open Sans', sans-serif;}
 
-/* RESPONSIVE */
+/*                   RESPONSIVE                   */
 @media (max-width: 700px) {
 
 	.menu-btn {
 		display: flex;
+		width: 0%;
 	}
 
 	.nav-name {
@@ -375,5 +409,35 @@ footer {
 	.home {
 		flex-direction: column;
 		align-items: center;
+	}
+
+	.presentation {
+		display: block;
+		height: 950px;
+	}
+	
+	.about-me {
+		padding: 0;
+		width: 100%;
+		font-size: 100%;
+		text-align: center;
+	}
+
+	.about-me h2 {
+		padding: 0;
+		font-size: 30px;
+
+	}
+
+	.me {
+		display: block;
+		margin: 10px 0;
+		width: 100%;
+		height: 270px;
+		background-size: cover;
+	}
+
+	.experience {
+		padding: 40px 0;
 	}
 }
