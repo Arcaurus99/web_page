@@ -4,6 +4,10 @@
 	padding:0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background:#050512;
 	color:#19d4e6; 
@@ -37,7 +41,7 @@ header ul {
 	margin-left: 5%;
 	cursor: pointer;
 	display: none;
-	z-index: 2;
+	z-index: 3;
 }
 
 .nav-name {
@@ -80,6 +84,7 @@ header ul {
 }
 
 .nav-main ul li:hover{
+	text-shadow: 0 0 3px #19d4e6;
 	background: rgba(5, 5, 18, 0.55);
 	/*opacity: 0.2;*/
 }
@@ -89,6 +94,11 @@ header ul {
 }
 
 /* SECTION BANNER */
+#banner {
+	padding-top: 0;
+	min-height: 100vh;
+	width: 100%;	
+}
 
 .banner {
 	width: 100%;
@@ -101,6 +111,30 @@ header ul {
 	border-right: 0;
 }
 
+.down-arrow {
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.bounce:hover {
+	-moz-animation: bounce 2s infinite;
+ 	-webkit-animation: bounce 2s infinite;
+  	animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-20px);
+	}
+	60% {
+		transform: translateY(-10px);
+	}
+}
 
 .home {
 	width: 100%;
@@ -155,14 +189,15 @@ header ul {
 }
 
 /*------						INFORMACIÓN								-----*/
-.information {
-	margin: 0 7%;
-	padding: 0 7%;
+section {
+	margin: auto;
+	padding: 7% 1px;
+	padding-bottom: 0;
+	width: 71%;
 }
 
 /* Presentación */
 .presentation {
-	margin-top: 40px;
 	font-size: 100%;
 	width: 100%;
 	padding: 40px 30px;
@@ -182,7 +217,7 @@ header ul {
 .about-me h2 {
 	color: #a3eef5;
 	padding: 10px;
-	padding-left: 25px;
+	padding: 0 25px;
 	margin-bottom: 15px;
 }
 
@@ -196,6 +231,7 @@ header ul {
 	margin: 5px 20px;
 	padding: 20px;
 	background: url(./../Images/logo/logo_size.jpg);
+	background-position: center;
 	background-size: cover;
 	border-radius: 20px;
 	transition: background 0.7s;
@@ -203,11 +239,16 @@ header ul {
 
 .me:hover {
 	background: url(./../Images/pictures/yo.jpg);
+	background-position: center;
 	background-size: cover;
 }
 
 .me-picture {
 	width: 100% /*DESACTIVADA*/
+}
+
+#experience {
+	padding: 0; 
 }
 
 .experience {
@@ -329,6 +370,10 @@ header ul {
 	margin: 10px;
 }
 
+.enlaces div a:hover {
+	text-shadow: 0 0 4px #19d4e6;
+}
+
 /* 						FOOTER  					*/
 footer {
 	margin: auto;
@@ -363,20 +408,48 @@ footer {
 		background: #050512;
 		height: 100%;
 		opacity: .9;
-		padding: 30px;
-		padding-top: 55px;
+		padding: 60px 10px;
 		transform: translateX(-400px); /*-20 para que se vea sin JS*/
+		z-index: 2;
+	}
+
+	.nav-menu.show {
+		transform: translateX(-20px);
+	}
+
+	.nav-main ul li {
+		padding-left: 0;
 	}
 
 	.nav-menu li a {
-		padding: 20px;
-		padding-left: 10px;
+		padding: 20px 7px;
 		font-size: 30px;		
+	}
+
+	#banner {
+		min-height: 90vh;
+		margin: 0 auto;
 	}
 
 	.banner {
 		flex-direction: column;
 		align-items: center;
+		position: absolute;
+		top: 25%;
+		bottom: 25%;
+	}
+
+	.down-arrow {
+		margin: auto;
+		width: 100%;
+		position: absolute;
+		top: 82%;
+	}
+		
+	.home {
+		flex-direction: column;
+		align-items: center;
+		padding: 20% 0;
 	}
 
 	.introduce {
@@ -406,11 +479,6 @@ footer {
 		font-size: 3rem;
 	}
 
-	.home {
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.presentation {
 		display: block;
 		height: 950px;
@@ -438,6 +506,8 @@ footer {
 	}
 
 	.experience {
+		height: 1650px;
 		padding: 40px 0;
+		display: block;
 	}
 }
