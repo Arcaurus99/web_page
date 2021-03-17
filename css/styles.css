@@ -166,12 +166,12 @@ header ul {
 	width: 250px;
 	height: 250px;
 	border-radius: 60px;
-	box-shadow: 2px 2p: var(--main-other);
+	box-shadow: 2px 2px var(--main-primary);
 	transition: box-shadow 1s;
 }
 
 .happy-picture:hover {	
-	box-shadow: 10px 10p: var(--main-other);
+	box-shadow: 10px 10px var(--main-primary);
 }
 
 .home div.I-am {
