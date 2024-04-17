@@ -240,18 +240,18 @@ section {
 	width: 40%;
 	margin: 5px 20px;
 	padding: 20px;
-	background: url(./../Images/logo/logo_size.jpg);
+	background: url(./../Images/pictures/me.jpg);
 	background-position: center;
 	background-size: cover;
 	border-radius: 20px;
 	transition: background 0.7s;
 }
 
-.me:hover {
-	background: url(./../Images/pictures/yo.jpg);
+/*.me:hover {
+	background: url(./../Images/logo/logo_sizepictures/me.jpg);
 	background-position: center;
 	background-size: cover;
-}
+}*/
 
 .me-picture {
 	width: 100% /*DESACTIVADA*/
@@ -259,6 +259,7 @@ section {
 
 /*-------------------------------EXPERIENCE---------------------------------*/
 #experience {
+	height: 100%;
 	margin-top: 7%;
 	margin-bottom: 7%;
 	padding: 0; 
@@ -267,7 +268,7 @@ section {
 .experience {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
-	height: 800px;
+	height: 100%;
 }
 
 .experience h2 {
@@ -355,7 +356,7 @@ section {
 	padding: 20px 0;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
-	height: 1200px;
+	height: 100%;
 }
 
 .tr-tittle {
@@ -369,7 +370,7 @@ section {
 	border-radius: 5px;
 }
 
-.university {
+.university, .technical, .certificate  {
 	padding: 20px 14.5%;
 	margin-bottom: 20px;
 	background: var(--main-sec-transparent);
@@ -393,18 +394,6 @@ section {
 .unicauca {
 	width: 100%;
 }
-
-.technical {
-	padding: 20px 14.5%;
-	margin-bottom: 20px;
-	background: var(--main-sec-transparent);
-	border: 1px solid;
-	border-left: 0;
-	border-right: 0;
-	border-color: var(--main-other);
-	display: flex;
-}
-
 .sena {
 	width: 100%;
 }
